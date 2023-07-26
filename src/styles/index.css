@@ -1,3 +1,10 @@
 /* 
     General Styles
 */
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url('https://img.freepik.com/foto-gratis/tiro-angulo-fascinante-cielo-estrellado_181624-27925.jpg?w=1380&t=st=1690395021~exp=1690395621~hmac=b0d995e99c061e298ec69816fb5cac5e69de5a25daacb86d1d858f624c9b6337');
+}

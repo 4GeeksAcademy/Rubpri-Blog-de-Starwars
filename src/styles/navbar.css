@@ -1,0 +1,31 @@
+.element {
+    border-bottom: 4px solid midnightblue; 
+  }
+
+  .navright {
+    margin-right: 15px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .navbar .navright a {
+    text-decoration: none;
+    color:black;
+  }
+
+  .navbar .navright a:hover {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .boton {
+    background-color: black;
+    color: white;
+  }
+
+  .boton:hover {
+    background-color: blue;
+    color: white;
+  }
+

@@ -61,7 +61,63 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetchCharacters();
 
-			}
+			},
+
+			planets: () => {
+				
+				const host = "https://www.swapi.tech/api/planets/";
+
+  				const fetchPlanets = async () => {
+    			const url = host;
+   				const request = {
+     			 method: "GET",
+    			};
+			
+    			const response = await fetch(url, request);
+
+    			if (response.ok) {
+     			const data = await response.json();
+      			localStorage.setItem('planets', JSON.stringify(data))
+    			} else {
+      			console.log("Error", response.status, response.statusText);
+    			}
+  				};
+
+				fetchPlanets();
+			},
+
+			starships: () => {
+				
+				const host = "https://www.swapi.tech/api/starships/";
+
+  				const fetchStarships = async () => {
+    			const url = host;
+   				const request = {
+     			 method: "GET",
+    			};
+			
+    			const response = await fetch(url, request);
+
+    			if (response.ok) {
+     			const data = await response.json();
+      			localStorage.setItem('starships', JSON.stringify(data))
+    			} else {
+      			console.log("Error", response.status, response.statusText);
+    			}
+  				};
+
+				fetchStarships();
+			},
+			
+
+
+
+
+
+
+
+
+
 		}
 	};
 };

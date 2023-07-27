@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 
 export const Navbar = () => {
+
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 element">
 			
@@ -14,7 +16,7 @@ export const Navbar = () => {
 				/>
 			 </span>
 			</Link>
-			
+
 			
 			<div className="d-flex navright">
 

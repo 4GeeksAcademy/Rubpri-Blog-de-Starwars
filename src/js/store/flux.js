@@ -37,6 +37,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			characters: () => {
+				
+  				const host = "https://www.swapi.tech/api/people/";
+
+  				const fetchCharacters = async () => {
+    			const url = host;
+   				const request = {
+     			 method: "GET",
+    			};
+			
+    			const response = await fetch(url, request);
+
+    			if (response.ok) {
+     			const data = await response.json();
+      			localStorage.setItem('characters', JSON.stringify(data))
+    			} else {
+      			console.log("Error", response.status, response.statusText);
+    			}
+  				};
+
+				fetchCharacters();
+
 			}
 		}
 	};

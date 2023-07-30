@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.js";
 import "../../styles/navbar.css";
+import {BtnFavorites} from "./BtnFavorites.jsx"
 
 export const Navbar = () => {
 
+	const {store, actions} = useContext(Context);
 
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 element">
@@ -39,9 +42,11 @@ export const Navbar = () => {
 			</div>
 
 			<div className="ml-auto me-5">
-				<Link to="/demo">
-				 <button className="btn boton">Favorites</button>
-				</Link>
+
+				<BtnFavorites />
+
+
+				
 			</div>
 
 			</div>

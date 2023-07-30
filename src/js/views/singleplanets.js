@@ -35,7 +35,7 @@ export const Singleplanets = props => {
     fetchApifinal();
   }, [id]);
 
-
+const handleOnErrorImg = (e) => {e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg"};
 console.log(apifinal)
 	  
 	return (
@@ -48,6 +48,7 @@ console.log(apifinal)
 					<img 
 					className="img-fluid rounded start" 
 					src={"https://starwars-visualguide.com/assets/img/planets/" + (id) + ".jpg"} 
+					onError={handleOnErrorImg}
 					/>
 				</div>
 				

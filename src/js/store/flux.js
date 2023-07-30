@@ -1,18 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			favorites: []	
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -108,13 +97,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetchStarships();
 			},
+			addFavorite: (title) => {
+				setStore({favorites: [...getStore().favorites, title]})
+			},
+			removeFavorite: (id) => {
+				setStore({favorites: getStore().favorites.filter((item, i) => {
+					return i != id;
+					})})
+			}
 			
-
-
-
-
-
-
 
 
 

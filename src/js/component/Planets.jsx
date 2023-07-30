@@ -6,6 +6,8 @@ export const Planets = () => {
     JSON.parse(localStorage.getItem("planets"))
   );
 
+  const handleOnErrorImg = (e) => {e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg"};
+
   return (
     
     <div className="container mt-5">
@@ -15,10 +17,17 @@ export const Planets = () => {
 
           <div className="col">
           <div className="card mb-5" >
-          <img src={"https://starwars-visualguide.com/assets/img/planets/" + (index + 1) + ".jpg"} className="card-img-top" alt="..."/>
+          <img src={"https://starwars-visualguide.com/assets/img/planets/" + (index + 1) + ".jpg"} 
+          className="card-img-top" 
+          onError={handleOnErrorImg}>   
+          </img>
+          
           <div className="card-body">
           <h5 className="card-title">{item.name}</h5>
-          <Link to={"/planets/" + (index + 1)} className="btn btn-warning mt-2">Details</Link>
+          <Link to={"/planets/" + (index + 1)} 
+          className="btn btn-warning mt-2">
+          Details
+          </Link>
           </div>
           </div>
           </div>

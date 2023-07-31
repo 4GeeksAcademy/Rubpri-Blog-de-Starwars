@@ -9,6 +9,7 @@ const myFavorites = store.favorites;
 
 return (
     <div className="dropdown">
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">{myFavorites.length}</span>
 
         <button 
         className="btn btn-secondary dropdown-toggle"
@@ -29,17 +30,18 @@ return (
                         <button 
                         type="button" 
                         className="btn btn-oytline-danger me-2"
-                        onClick={() => actions.removeFavorite(id)}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            actions.removeFavorite(id);
+                        }}
                         >
                         <i className="fa fa-trash text-danger"></i>
                         </button>
-
                     </li>
                 )
                )
             )
             }
-
         </ul>
 
 

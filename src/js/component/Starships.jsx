@@ -17,7 +17,7 @@ export const Starships = () => {
 
           <div className="col">
           <div className="card mb-5" >
-          <img src={"https://starwars-visualguide.com/assets/img/starships/" + (index + 1) + ".jpg"} 
+          <img src={"https://starwars-visualguide.com/assets/img/starships/" + (item.uid) + ".jpg"} 
           className="card-img-top" 
           onError={handleOnErrorImg}
           alt="..."/>

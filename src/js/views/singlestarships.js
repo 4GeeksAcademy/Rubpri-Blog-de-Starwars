@@ -48,7 +48,7 @@ const handleOnErrorImg = (e) => {e.target.src = "https://starwars-visualguide.co
 				<div className="col-md-7 col-lg-6 col-xl-5">
 					<img 
 					className="img-fluid rounded start" 
-					src={"https://starwars-visualguide.com/assets/img/starships/" + (id) + ".jpg"}
+					src={"https://starwars-visualguide.com/assets/img/starships/" + (starships.results[id - 1].uid) + ".jpg"}
 					onError={handleOnErrorImg}					/>
 				</div>
 				

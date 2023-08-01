@@ -16,7 +16,7 @@ export const Singlestarships = props => {
   	const host = "https://www.swapi.tech/api/starships/";
 
   	const fetchApifinal = async () => {
-    const url = host + id;
+    const url = host + (starships.results[id - 1].uid);
     const request = {
       method: "GET",
     };

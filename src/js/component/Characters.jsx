@@ -28,8 +28,10 @@ export const Characters = () => {
           <h5 className="card-title">{item.name}</h5>
           
           <div className="d-flex justify-content-between">
-          <Link to={"/characters/" + (index + 1)} className="btn btn-warning mt-2">
-          Details</Link>
+          <Link to={"/characters/" + (index + 1)}
+          className="btn btn-warning mt-2">
+          Details
+          </Link>
           
           <button onClick={() => actions.addFavorite(item.name)} 
           type="button" 
